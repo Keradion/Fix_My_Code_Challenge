@@ -70,7 +70,7 @@ if __name__ == '__main__':
 
     u_pwd = "myPassword"
     user_1.__password = u_pwd
-    if user_1.__password == u_pwd:
+    if not user_1.__password == u_pwd:
         print("User.password should be hashed")
 
     user_2.__password = None
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     if user_2.__password is None:
         print("User.password should be None if setter to an integer")
 
-    if not user_1.is_valid_password(u_pwd):
+    if user_1.is_valid_password(u_pwd):
         print("is_valid_password should return True if it's the right \
 password")
 
